@@ -1,34 +1,16 @@
-import './App.css'
-import BookingContact from './components/BookingContact'
+// App.jsx — one clean split, not four
+import { lazy, Suspense } from 'react'
 import Hero from './components/Hero'
-import Pricing from './components/Pricing'
-import Results from './components/Results'
-import Services from './components/Services'
+
+const BelowFold = lazy(() => import('./components/BelowFold'))
 
 function App() {
-
   return (
-     <>
-      <main>
-        <Hero/>
-        <section id="services">
-          <Services/>
-        </section>
-
-        <section id="results">
-          <Results/>
-        </section>
-
-        <section id="pricing">
-          <Pricing/>
-        </section>
-
-        <section id="contact">
-          <BookingContact/>
-        </section>
-      </main>
-    </>
+    <main>
+      <Hero />
+      <Suspense fallback={null}>
+        <BelowFold />
+      </Suspense>
+    </main>
   )
 }
-
-export default App
