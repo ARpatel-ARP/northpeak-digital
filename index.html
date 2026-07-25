@@ -4,7 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-project</title>
+
+    <!-- Preload the LCP image so the browser fetches it immediately,
+         instead of waiting to discover it after JS runs -->
+    <link rel="preload" as="image" href="/hero-bg.webp" fetchpriority="high" />
+
+    <title>NorthPeak Digital — Custom Software & App Development</title>
+    <meta
+      name="description"
+      content="Custom software, mobile apps, web apps, and Shopify/WordPress development. Done fast, done right, done once."
+    />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:title" content="NorthPeak Digital — Custom Software & App Development" />
+    <meta property="og:description" content="Custom software, mobile apps, web apps, and Shopify/WordPress development. Done fast, done right, done once." />
+    <meta property="og:type" content="website" />
+
+    <meta name="theme-color" content="#3f4a2b" />
   </head>
   <body>
     <div id="root"></div>
