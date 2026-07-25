@@ -1,11 +1,9 @@
-import heroBg from '../assets/hero-bg.jpeg';
-
 function Hero() {
   return (
     <section
       id="home"
       className="relative isolate overflow-hidden bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${heroBg})` }}
+      style={{ backgroundImage: `url(/hero-bg.webp)` }}
     >
       {/*bg */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#2f3a1e]/80 via-[#3f4a2b]/55 to-[#2f3a1e]/85" />
